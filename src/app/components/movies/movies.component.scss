@@ -1,0 +1,24 @@
+.peliculas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0.8em;
+    background-color: rgb(0, 69, 126);
+    .pelicula{
+        display: flex;
+        padding: 0.5em;
+        margin: 0.5em;
+        border-radius: 0.3em;
+        flex-direction: column;
+        background-color: rgb(0, 156, 204);
+        justify-content: space-between;
+        span{
+            font-size: 1.3em;
+            padding: 0.3em;
+        }
+        img{
+            padding: 0.3em;
+            border-radius: 0.3em;
+
+        }
+    }
+}

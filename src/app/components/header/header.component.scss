@@ -1,0 +1,12 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    a{
+        all:unset;
+        padding: 0.5em;
+        cursor: pointer;
+    }
+    .router-link-active {
+        background-color: rgba(164, 226, 255, 0.472);
+    }
+}

@@ -1,0 +1,13 @@
+<header>
+    <mat-toolbar class="navigation">
+        <a [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
+            Home
+        </a>
+        <a [routerLink]="['/movie/popular']" routerLinkActive="router-link-active">
+            Popular
+        </a>
+        <a [routerLink]="['/movie/upcoming']" routerLinkActive="router-link-active">
+            Upcoming
+        </a>
+    </mat-toolbar>
+</header>
