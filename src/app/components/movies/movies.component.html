@@ -1,8 +1,10 @@
 <div class="peliculas">
 
     <div class="pelicula" *ngFor="let movie of movies">
+        <a routerLink="/movie/{{movie.id}}" routerLinkActive="router-link-active" >
         <span>{{movie.title}}</span>
         <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="">
         <br>
+    </a>
     </div>
 </div>
