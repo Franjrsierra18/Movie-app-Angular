@@ -1,0 +1,68 @@
+.series{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 0.8em;
+  background-color: rgb(0, 69, 126);
+  .serie{
+      display: flex;
+      padding: 0.5em;
+      margin: 0.5em;
+      border-radius: 0.3em;
+      flex-direction: column;
+      background-color: rgb(0, 156, 204);
+      justify-content: space-between;
+      align-items: center;
+      a{
+        text-decoration: unset;
+        color: black;
+      }
+      p{
+        font-size: 1.3em;
+        padding: 0.3em;
+      }
+      .container-tv{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        a{
+          text-decoration: unset;
+          color: black;
+        }
+        p{
+            font-size: 1.3em;
+            padding: 0.3em;
+        }
+        .scrollable{
+          font-size: 0.8em;
+          text-align: justify;
+          border-radius: 0.3em;
+          padding: 0.5em;
+          background-color: rgb(109, 179, 240);
+          overflow-y: auto;
+          max-height: 24em;
+          width: 15em;
+      }
+      .scrollable::-webkit-scrollbar-track{
+          box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+          background-color: #F5F5F5;
+          border-radius: 10px;
+      }
+      .scrollable::-webkit-scrollbar{
+          width: 10px;
+          background-color: #F5F5F5;
+      }
+      .scrollable::-webkit-scrollbar-thumb{
+          border-radius: 10px;
+          background-image: -webkit-gradient(linear,
+                                  left bottom,
+                                  left top,
+                                  color-stop(0.44, rgb(122,153,217)),
+                                  color-stop(0.72, rgb(73,125,189)),
+                                  color-stop(0.86, rgb(28,58,148)));
+      }
+        img{
+          padding: 0.3em;
+          border-radius: 0.3em;
+      }
+    }
+  }
+}

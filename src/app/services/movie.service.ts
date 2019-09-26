@@ -11,4 +11,8 @@ export class MovieService {
   getMovies(category:string,language:string,page:string):Observable<object>{//creamos tantos métodos como necesitemos para traer la información que requieren nuestros componentes
     return this.http.get(`https://api.themoviedb.org/3/movie/${category}?api_key=09e6cf9871795d48bba7c9be1465ff3e&language=${language}&page=${page}`);
   }
+  getGenres():Observable<object>{//creamos tantos métodos como necesitemos para traer la información que requieren nuestros componentes
+    return this.http.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=09e6cf9871795d48bba7c9be1465ff3e&language=en-US`);
+  }
+
 }

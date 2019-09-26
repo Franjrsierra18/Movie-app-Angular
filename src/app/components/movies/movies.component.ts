@@ -1,6 +1,6 @@
-import { Component, OnInit,OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MovieService } from 'src/app/services/movie.service';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute } from '@angular/router';
 import {  Subscription } from 'rxjs';
 
 @Component({
@@ -8,8 +8,9 @@ import {  Subscription } from 'rxjs';
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.scss']
 })
-export class MoviesComponent implements OnInit,OnDestroy {
+export class MoviesComponent implements OnInit, OnDestroy {
   public movies: object[];
+  public genres: object[];
   public page: number = 0;
   public paramsSubscription:Subscription;
   constructor(public movieService: MovieService,
@@ -20,10 +21,16 @@ export class MoviesComponent implements OnInit,OnDestroy {
       
       this.getMovies(paramsMap['params']['category'])//upcoming o /movies
     })
+    this.getGenres()
   }
   getMovies(category){
     this.movieService.getMovies(category, 'es-ES', '1').subscribe(
       res => this.movies = res['results'],
+      error => console.log(error))
+  }
+  getGenres(){
+    this.movieService.getGenres().subscribe(
+      res => this.genres = res['genres'],
       error => console.log(error))
   }
   ngOnDestroy(){

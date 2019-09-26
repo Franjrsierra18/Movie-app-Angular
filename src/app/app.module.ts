@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
+import { TvPopularComponent } from './components/tv-popular/tv-popular.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
     CounterComponent,
     HeaderComponent,
     MoviesComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    TvPopularComponent
   ],
   imports: [
     BrowserModule,
