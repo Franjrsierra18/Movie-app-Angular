@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from 'src/app/services/movie.service';
+import { ActivatedRoute } from '@angular/router';
+import {  Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-movie-detail',
@@ -6,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movie-detail.component.scss']
 })
 export class MovieDetailComponent implements OnInit {
-
-  constructor() { }
+  public movie: object;
+  public paramsSubscription:Subscription;
+  constructor(public movieService: MovieService,
+    public route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.paramsSubscription=this.route.paramMap.subscribe(paramsMap=>{//nos suscribimos a cambios en los parámetros de la url ej: /movie/movies o /movie/upcoming
+      
+      this.getMoviesId(paramsMap['params']['id'])//upcoming o /movies
+    })
   }
-
+  getMoviesId(id){
+    this.movieService.getMoviesId(id).subscribe(
+      res => this.movie = res,
+      error => console.log(error))
+  }
 }

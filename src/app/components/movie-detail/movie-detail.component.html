@@ -1,12 +1,18 @@
-<div class="peliculas">
-
-  <div class="pelicula">
-      <p>{{movie.original_title}}</p>
-      <br>
+<div class="movie">
+  <h1>{{movie.title}}</h1>
+  <h3>{{movie.original_title}}</h3>
+  <div class="container-movie">
+    <div class="imagen">
       <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="">
+    </div>
+    <div class="details">
+      <p><strong>Review:</strong> {{movie.overview}}</p>
+      <p><strong>Rating:</strong> {{movie.vote_average}} ⭐</p>
+      <p><strong>Release:</strong> {{movie.release_date}}</p>
+      <p><strong>Duration:</strong> {{movie.runtime}}min</p>
       <br>
-  </div>
-  <div>
-    <p>{{movie.overview}}</p>
+      <br>
+      
+    </div>
   </div>
 </div>

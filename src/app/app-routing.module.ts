@@ -8,10 +8,7 @@ import { TvPopularComponent } from './components/tv-popular/tv-popular.component
 const routes: Routes = [
   { path: 'tv/:category', component: TvPopularComponent },
   { path: 'movies/:category', component: MoviesComponent },
-  { path: 'movie/:id', component: MovieDetailComponent },
-
-  // {path:'upcoming',component:},
-
+  { path: 'movie/:id', component: MovieDetailComponent }
 ];
 
 @NgModule({

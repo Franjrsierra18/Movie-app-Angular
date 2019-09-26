@@ -1,19 +1,53 @@
 <header>
-    <mat-toolbar class="navigation">
-        <a [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">
-            Home
-        </a>
-        <a [routerLink]="['/tv/popular']" routerLinkActive="router-link-active">
-            Popular TV Series
-        </a>
-        <a [routerLink]="['/tv/top_rated']" routerLinkActive="router-link-active">
-            Top Rated TV Series
-        </a>
-        <a [routerLink]="['/movies/popular']" routerLinkActive="router-link-active">
-            Popular Movies
-        </a>
-        <a [routerLink]="['/movies/upcoming']" routerLinkActive="router-link-active">
-            Upcoming Movies
-        </a>
-    </mat-toolbar>
+  <div class="responsivemenu" *ngIf="responsiveNav">
+    <a [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }"
+      class="active">
+      <h3>Home</h3>
+      <a href="javascript:void(0);" class="icon" on-click="toggleNavigationClass()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </a>
+    <br>
+    <a [routerLink]="['/tv/popular']" routerLinkActive="router-link-active">
+      Popular TV Series
+    </a>
+    <br>
+    <a [routerLink]="['/tv/top_rated']" routerLinkActive="router-link-active">
+      Top Rated TV Series
+    </a>
+    <br>
+    <a [routerLink]="['/movies/popular']" routerLinkActive="router-link-active">
+      Popular Movies
+    </a>
+    <br>
+    <a [routerLink]="['/movies/upcoming']" routerLinkActive="router-link-active">
+      Upcoming Movies
+    </a>
+  </div>
+  <mat-toolbar [ngClass]="{
+        navigation:true,
+        topnav:true,
+        responsive:responsiveNav
+      }" id="myTopnav">
+    <a [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }"
+      class="active">
+      Home
+    </a>
+    <a [routerLink]="['/tv/popular']" routerLinkActive="router-link-active">
+      Popular TV Series
+    </a>
+    <a [routerLink]="['/tv/top_rated']" routerLinkActive="router-link-active">
+      Top Rated TV Series
+    </a>
+    <a [routerLink]="['/movies/popular']" routerLinkActive="router-link-active">
+      Popular Movies
+    </a>
+    <a [routerLink]="['/movies/upcoming']" routerLinkActive="router-link-active">
+      Upcoming Movies
+    </a>
+    <a href="javascript:void(0);" class="icon" on-click="toggleNavigationClass()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </mat-toolbar>
+
 </header>

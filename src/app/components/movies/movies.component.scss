@@ -262,7 +262,7 @@
         align-items: center;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         p{
-            font-size: 1.3em;
+            font-size: 1.1em;
             padding: 0.3em;
         }
         .scrollable{
@@ -272,7 +272,8 @@
             padding: 0.5em;
             background-color: rgb(109, 179, 240);
             overflow-y: auto;
-            max-height: 6em;
+            max-height: 8em;
+            min-height: 6em;
             .genres-names{
                 color: white;
                 background: grey;
