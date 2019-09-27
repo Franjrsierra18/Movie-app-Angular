@@ -10,6 +10,7 @@ import {  Subscription } from 'rxjs';
 })
 export class MovieDetailComponent implements OnInit {
   public movie: object;
+  public loading:any;
   public paramsSubscription:Subscription;
   constructor(public movieService: MovieService,
     public route: ActivatedRoute) { }
@@ -21,8 +22,12 @@ export class MovieDetailComponent implements OnInit {
     })
   }
   getMoviesId(id){
+    this.loading = true;
     this.movieService.getMoviesId(id).subscribe(
-      res => this.movie = res,
+      res => {
+        this.movie = res;
+        this.loading = false;
+      },
       error => console.log(error))
   }
 }

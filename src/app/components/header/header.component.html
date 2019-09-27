@@ -2,27 +2,27 @@
   <div class="responsivemenu" *ngIf="responsiveNav">
     <a [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }"
       class="active">
-      <h3>Home</h3>
+      <h4>Home</h4>
       <a href="javascript:void(0);" class="icon" on-click="toggleNavigationClass()">
         <i class="fa fa-bars"></i>
       </a>
     </a>
-    <br>
-    <a [routerLink]="['/tv/popular']" routerLinkActive="router-link-active">
+    <a [routerLink]="['/tv/popular']" routerLinkActive="router-link-active" on-click="toggleNavigationClass()">
       Popular TV Series
     </a>
     <br>
-    <a [routerLink]="['/tv/top_rated']" routerLinkActive="router-link-active">
+    <a [routerLink]="['/tv/top_rated']" routerLinkActive="router-link-active" on-click="toggleNavigationClass()">
       Top Rated TV Series
     </a>
     <br>
-    <a [routerLink]="['/movies/popular']" routerLinkActive="router-link-active">
+    <a [routerLink]="['/movies/popular']" routerLinkActive="router-link-active" on-click="toggleNavigationClass()">
       Popular Movies
     </a>
     <br>
-    <a [routerLink]="['/movies/upcoming']" routerLinkActive="router-link-active">
+    <a [routerLink]="['/movies/upcoming']" routerLinkActive="router-link-active" on-click="toggleNavigationClass()">
       Upcoming Movies
     </a>
+    <br>
   </div>
   <mat-toolbar [ngClass]="{
         navigation:true,

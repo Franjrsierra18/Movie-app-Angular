@@ -1,6 +1,8 @@
-<div class="movie">
+<app-loading *ngIf="loading"></app-loading>
+<div class="movie" *ngIf="!loading">
   <h1>{{movie.title}}</h1>
   <h3>{{movie.original_title}}</h3>
+  <br>
   <div class="container-movie">
     <div class="imagen">
       <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="">
@@ -12,7 +14,7 @@
       <p><strong>Duration:</strong> {{movie.runtime}}min</p>
       <br>
       <br>
-      
+
     </div>
   </div>
 </div>

@@ -1,0 +1,9 @@
+<carousel [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10"
+  [interval]="false">
+  <div class="pelicula" *ngFor="let movie of movies">
+    <slide *ngFor="let slide of slides" style="width: 100%;">
+      <img src="https://image.tmdb.org/t/p/w200/{{movie.poster_path}}" alt="image slide"
+        style="display: block; width: 100%;">
+    </slide>
+  </div>
+</carousel>

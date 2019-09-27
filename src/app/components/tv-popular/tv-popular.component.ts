@@ -11,6 +11,7 @@ import {  Subscription } from 'rxjs';
 export class TvPopularComponent implements OnInit,OnDestroy {
   public series: object[];
   public page: number = 0;
+  public loading:any;
   public paramsSubscription:Subscription;
   constructor(public tvService: TvService,
     public route: ActivatedRoute) { }
@@ -23,8 +24,12 @@ export class TvPopularComponent implements OnInit,OnDestroy {
     })
   }
   getSeries(category){
+    this.loading = true;
     this.tvService.getSeries(category, 'es-ES', '1').subscribe(
-      res => this.series = res['results'],
+      res => {
+        this.series = res['results'];
+        this.loading = false;
+      },
       error => console.log(error))
   }
   ngOnDestroy(){

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-  public responsiveNav:boolean=true
+  public responsiveNav:boolean=false;
   ngOnInit() {
   }
   toggleNavigationClass(){

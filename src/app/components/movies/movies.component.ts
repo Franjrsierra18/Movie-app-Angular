@@ -11,6 +11,7 @@ import {  Subscription } from 'rxjs';
 export class MoviesComponent implements OnInit, OnDestroy {
   public movies: object[];
   public genres: object[];
+  public loading:any;
   public page: number = 0;
   public paramsSubscription:Subscription;
   constructor(public movieService: MovieService,
@@ -24,13 +25,21 @@ export class MoviesComponent implements OnInit, OnDestroy {
     this.getGenres()
   }
   getMovies(category){
+    this.loading = true;
     this.movieService.getMovies(category, 'es-ES', '1').subscribe(
-      res => this.movies = res['results'],
+      res => {
+        this.movies = res['results'];
+        this.loading = false;
+      },
       error => console.log(error))
   }
   getGenres(){
+    this.loading = true;
     this.movieService.getGenres().subscribe(
-      res => this.genres = res['genres'],
+      res => {
+        this.genres = res['genres'];
+        this.loading = false;
+      },
       error => console.log(error))
   }
   ngOnDestroy(){

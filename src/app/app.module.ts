@@ -12,6 +12,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { TvPopularComponent } from './components/tv-popular/tv-popular.component';
+import { LoadingComponent } from './components/loading/loading.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { TvPopularComponent } from './components/tv-popular/tv-popular.component
     HeaderComponent,
     MoviesComponent,
     MovieDetailComponent,
-    TvPopularComponent
+    TvPopularComponent,
+    LoadingComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +34,7 @@ import { TvPopularComponent } from './components/tv-popular/tv-popular.component
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
+    CarouselModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
