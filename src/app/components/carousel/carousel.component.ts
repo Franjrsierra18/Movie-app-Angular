@@ -9,12 +9,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CarouselComponent implements OnInit {
   public movies: object[];
-  itemsPerSlide = 8;
+  itemsPerSlide = 6;
   singleSlideOffset = true;
 
   slides = [
     { image: 'https://i.pinimg.com/originals/ff/a1/09/ffa1096433f14975a629e67880ded7e7.jpg' }
   ];
+
   constructor(public movieService: MovieService,
     public route: ActivatedRoute) { }
 
@@ -29,4 +30,3 @@ export class CarouselComponent implements OnInit {
       error => console.log(error))
   }
 }
-

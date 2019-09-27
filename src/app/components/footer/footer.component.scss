@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: rgb(29, 38, 71);
+  color: white;
+  margin-top: 3em;
+
+  .fa {
+    padding-right: 5px;
+  }
+
+}

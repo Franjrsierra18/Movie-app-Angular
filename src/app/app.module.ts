@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatToolbarModule } from '@angular/material/toolbar'
 
 import { AppComponent } from './app.component';
-import { CounterComponent } from './components/counter/counter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { MoviesComponent } from './components/movies/movies.component';
@@ -15,17 +14,21 @@ import { TvPopularComponent } from './components/tv-popular/tv-popular.component
 import { LoadingComponent } from './components/loading/loading.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CounterComponent,
     HeaderComponent,
     MoviesComponent,
     MovieDetailComponent,
     TvPopularComponent,
     LoadingComponent,
-    CarouselComponent
+    CarouselComponent,
+    FooterComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     HttpClientModule,
     MatToolbarModule,
     CarouselModule.forRoot(),
+    BsDropdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
