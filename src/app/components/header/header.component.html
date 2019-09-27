@@ -1,53 +1,43 @@
-<header>
-  <div class="responsivemenu" *ngIf="responsiveNav">
-    <a [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }"
-      class="active">
-      <h4>Home</h4>
-      <a href="javascript:void(0);" class="icon" on-click="toggleNavigationClass()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </a>
-    <a [routerLink]="['/tv/popular']" routerLinkActive="router-link-active" on-click="toggleNavigationClass()">
-      Popular TV Series
-    </a>
-    <br>
-    <a [routerLink]="['/tv/top_rated']" routerLinkActive="router-link-active" on-click="toggleNavigationClass()">
-      Top Rated TV Series
-    </a>
-    <br>
-    <a [routerLink]="['/movies/popular']" routerLinkActive="router-link-active" on-click="toggleNavigationClass()">
-      Popular Movies
-    </a>
-    <br>
-    <a [routerLink]="['/movies/upcoming']" routerLinkActive="router-link-active" on-click="toggleNavigationClass()">
-      Upcoming Movies
-    </a>
-    <br>
-  </div>
-  <mat-toolbar [ngClass]="{
-        navigation:true,
-        topnav:true,
-        responsive:responsiveNav
-      }" id="myTopnav">
-    <a [routerLink]="['/']" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }"
-      class="active">
-      Home
-    </a>
-    <a [routerLink]="['/tv/popular']" routerLinkActive="router-link-active">
-      Popular TV Series
-    </a>
-    <a [routerLink]="['/tv/top_rated']" routerLinkActive="router-link-active">
-      Top Rated TV Series
-    </a>
-    <a [routerLink]="['/movies/popular']" routerLinkActive="router-link-active">
-      Popular Movies
-    </a>
-    <a [routerLink]="['/movies/upcoming']" routerLinkActive="router-link-active">
-      Upcoming Movies
-    </a>
-    <a href="javascript:void(0);" class="icon" on-click="toggleNavigationClass()">
-      <i class="fa fa-bars"></i>
-    </a>
+<!-- <header>
+  <mat-toolbar class="header">
+    <div class="header-home">
+      <a href="#default" [routerLink]="['/']" routerLinkActive="router-link-active"
+        [routerLinkActiveOptions]="{ exact: true }" class="active">Home</a>
+    </div>
+    <div class="header-right">
+      <a [routerLink]="['/tv/popular']" routerLinkActive="router-link-active">Popular TV Series</a>
+      <a [routerLink]="['/tv/top_rated']" routerLinkActive="router-link-active">Top Rated TV Series</a>
+      <a [routerLink]="['/movies/popular']" routerLinkActive="router-link-active">Popular Movies</a>
+      <a [routerLink]="['/movies/upcoming']" routerLinkActive="router-link-active">Upcoming Movies</a>
+    </div>
   </mat-toolbar>
+</header> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active"
+  [routerLinkActiveOptions]="{ exact: true }" class="active"><h3>Home</h3></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-</header>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-3">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/tv/popular']" routerLinkActive="router-link-active">Popular TV Series</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/tv/top_rated']" routerLinkActive="router-link-active">Top Rated TV Series</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/movies/popular']" routerLinkActive="router-link-active">Popular Movies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/movies/upcoming']" routerLinkActive="router-link-active">Upcoming Movies</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>

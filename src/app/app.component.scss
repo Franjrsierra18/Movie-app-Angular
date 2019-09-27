@@ -1,25 +1,5 @@
 .main{
   background-color: rgb(0, 69, 126);
-  height: 104vh;
-  input[type=text] {
-    display: inline-block;
-    margin: 2em 0 2em 15em;
-    padding: 7px;
-    border: none;
-    font-size: 20px;
-    width: 33em;
-  }
-  button {
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #ddd;
-    font-size: 21.5px;
-    border: none;
-    cursor: pointer;
-    &:hover {
-      background: #ccc;
-    }
-  }
+  height: 170vh;
+  position: relative;
 }
-

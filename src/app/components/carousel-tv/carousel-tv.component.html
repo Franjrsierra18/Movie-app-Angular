@@ -1,0 +1,13 @@
+<div class="pt-5">
+    <h2>Popular Tv Series</h2>
+    <br>
+    <carousel [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10"
+      [interval]="1000" [pauseOnFocus]="false">
+      <div class="tv" *ngFor="let serie of series">
+        <slide *ngFor="let slide of slides" style="width: 100%;">
+          <img src="https://image.tmdb.org/t/p/w200/{{serie.poster_path}}" alt="image slide"
+            style="display: block; width: 100%; max-width: 400px; height: auto">
+        </slide>
+      </div>
+    </carousel>
+  </div>  

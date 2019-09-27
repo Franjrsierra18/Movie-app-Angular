@@ -17,6 +17,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CarouselTvComponent } from './components/carousel-tv/carousel-tv.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     LoadingComponent,
     CarouselComponent,
     FooterComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    CarouselTvComponent
   ],
   imports: [
     BrowserModule,

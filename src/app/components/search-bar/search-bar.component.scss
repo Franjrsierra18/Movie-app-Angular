@@ -1,7 +1,6 @@
 form.search {
   margin: 2em auto;
   max-width: 300px;
-  border-radius: 25px;
 
   &::after {
     content: "";
@@ -16,6 +15,7 @@ form.search {
     float: left;
     width: 80%;
     background: #f1f1f1;
+    border-radius: 25px 0px 0px 25px;
   }
   button {
     float: left;
@@ -28,6 +28,7 @@ form.search {
     border-left: none;
     /* Prevent double borders */
     cursor: pointer;
+    border-radius: 0px 25px 25px 0px;
   
     &:hover {
       background: #0b7dda;
