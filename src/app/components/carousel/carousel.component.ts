@@ -22,7 +22,7 @@ export class CarouselComponent implements OnInit {
     this.getMovies()
   }
   getMovies(){
-    this.movieService.getMovies('popular', 'es-ES', '1').subscribe(
+    this.movieService.getMovies('popular', 'es-ES', 1).subscribe(
       res => {
         this.movies = res['results'];
       },
