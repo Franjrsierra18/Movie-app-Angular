@@ -1,8 +1,44 @@
 <div class="pt-5">
   <h2>Popular Movies</h2>
   <br>
-  <carousel [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10"
-    [interval]="1000" [pauseOnFocus]="false">
+  <carousel [itemsPerSlide]="7" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10"
+    [interval]="1000" [pauseOnFocus]="false" class="xgrande">
+    <div class="pelicula" *ngFor="let movie of movies">
+      <slide *ngFor="let slide of slides" style="width: 100%;">
+        <img src="https://image.tmdb.org/t/p/w200/{{movie.poster_path}}" alt="image slide"
+          style="display: block; width: 100%; max-width: 400px; height: auto">
+      </slide>
+    </div>
+  </carousel>
+  <carousel [itemsPerSlide]="6" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10"
+    [interval]="1000" [pauseOnFocus]="false" class="grande">
+    <div class="pelicula" *ngFor="let movie of movies">
+      <slide *ngFor="let slide of slides" style="width: 100%;">
+        <img src="https://image.tmdb.org/t/p/w200/{{movie.poster_path}}" alt="image slide"
+          style="display: block; width: 100%; max-width: 400px; height: auto">
+      </slide>
+    </div>
+  </carousel>
+  <carousel [itemsPerSlide]="5" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10"
+    [interval]="1000" [pauseOnFocus]="false" class="mediano">
+    <div class="pelicula" *ngFor="let movie of movies">
+      <slide *ngFor="let slide of slides" style="width: 100%;">
+        <img src="https://image.tmdb.org/t/p/w200/{{movie.poster_path}}" alt="image slide"
+          style="display: block; width: 100%; max-width: 400px; height: auto">
+      </slide>
+    </div>
+  </carousel>
+  <carousel [itemsPerSlide]="4" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10"
+    [interval]="1000" [pauseOnFocus]="false" class="peque">
+    <div class="pelicula" *ngFor="let movie of movies">
+      <slide *ngFor="let slide of slides" style="width: 100%;">
+        <img src="https://image.tmdb.org/t/p/w200/{{movie.poster_path}}" alt="image slide"
+          style="display: block; width: 100%; max-width: 400px; height: auto">
+      </slide>
+    </div>
+  </carousel>
+  <carousel [itemsPerSlide]="3" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10"
+    [interval]="1000" [pauseOnFocus]="false" class="xpeque">
     <div class="pelicula" *ngFor="let movie of movies">
       <slide *ngFor="let slide of slides" style="width: 100%;">
         <img src="https://image.tmdb.org/t/p/w200/{{movie.poster_path}}" alt="image slide"

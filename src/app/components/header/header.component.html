@@ -35,9 +35,6 @@
         <a class="nav-link" [routerLink]="['/movies/upcoming']" routerLinkActive="router-link-active">Upcoming Movies</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <app-search-bar></app-search-bar>
   </div>
 </nav>

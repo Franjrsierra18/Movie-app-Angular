@@ -1,38 +1,38 @@
-form.search {
-  margin: 2em auto;
-  max-width: 300px;
+// form.search {
+//   margin: 2em auto;
+//   max-width: 300px;
 
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+//   &::after {
+//     content: "";
+//     clear: both;
+//     display: table;
+//   }
 
-  input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 80%;
-    background: #f1f1f1;
-    border-radius: 25px 0px 0px 25px;
-  }
-  button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    /* Prevent double borders */
-    cursor: pointer;
-    border-radius: 0px 25px 25px 0px;
+//   input[type=text] {
+//     padding: 10px;
+//     font-size: 17px;
+//     border: 1px solid grey;
+//     float: left;
+//     width: 80%;
+//     background: #f1f1f1;
+//     border-radius: 25px 0px 0px 25px;
+//   }
+//   button {
+//     float: left;
+//     width: 20%;
+//     padding: 10px;
+//     background: #2196F3;
+//     color: white;
+//     font-size: 17px;
+//     border: 1px solid grey;
+//     border-left: none;
+//     /* Prevent double borders */
+//     cursor: pointer;
+//     border-radius: 0px 25px 25px 0px;
   
-    &:hover {
-      background: #0b7dda;
-    }
-  }
-}
+//     &:hover {
+//       background: #0b7dda;
+//     }
+//   }
+// }
 

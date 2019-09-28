@@ -18,6 +18,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselTvComponent } from './components/carousel-tv/carousel-tv.component';
+import { MainComponent } from './components/main/main.component';
+import { TvDetailComponent } from './components/tv-detail/tv-detail.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CarouselTvComponent } from './components/carousel-tv/carousel-tv.compon
     CarouselComponent,
     FooterComponent,
     SearchBarComponent,
-    CarouselTvComponent
+    CarouselTvComponent,
+    MainComponent,
+    TvDetailComponent
   ],
   imports: [
     BrowserModule,

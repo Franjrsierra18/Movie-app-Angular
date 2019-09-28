@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CarouselComponent implements OnInit {
   public movies: object[];
-  itemsPerSlide = 7;
+  // itemsPerSlide = 7;
   singleSlideOffset = true;
 
   slides = [

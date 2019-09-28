@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CarouselTvComponent implements OnInit {
   public series: object[];
-  itemsPerSlide = 7;
+  // itemsPerSlide = 7;
   singleSlideOffset = true;
 
   slides = [

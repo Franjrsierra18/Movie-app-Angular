@@ -1,13 +1,49 @@
 <div class="pt-5">
-    <h2>Popular Tv Series</h2>
-    <br>
-    <carousel [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10"
-      [interval]="1000" [pauseOnFocus]="false">
-      <div class="tv" *ngFor="let serie of series">
-        <slide *ngFor="let slide of slides" style="width: 100%;">
-          <img src="https://image.tmdb.org/t/p/w200/{{serie.poster_path}}" alt="image slide"
-            style="display: block; width: 100%; max-width: 400px; height: auto">
-        </slide>
-      </div>
-    </carousel>
-  </div>  
+  <h2>Popular Tv Series</h2>
+  <br>
+  <carousel [itemsPerSlide]="7" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
+    class="xgrande">
+    <div class="tv" *ngFor="let serie of series">
+      <slide *ngFor="let slide of slides" style="width: 100%;">
+        <img src="https://image.tmdb.org/t/p/w200/{{serie.poster_path}}" alt="image slide"
+          style="display: block; width: 100%; max-width: 400px; height: auto">
+      </slide>
+    </div>
+  </carousel>
+  <carousel [itemsPerSlide]="6" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
+    class="grande">
+    <div class="tv" *ngFor="let serie of series">
+      <slide *ngFor="let slide of slides" style="width: 100%;">
+        <img src="https://image.tmdb.org/t/p/w200/{{serie.poster_path}}" alt="image slide"
+          style="display: block; width: 100%; max-width: 400px; height: auto">
+      </slide>
+    </div>
+  </carousel>
+  <carousel [itemsPerSlide]="5" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
+    class="mediano">
+    <div class="tv" *ngFor="let serie of series">
+      <slide *ngFor="let slide of slides" style="width: 100%;">
+        <img src="https://image.tmdb.org/t/p/w200/{{serie.poster_path}}" alt="image slide"
+          style="display: block; width: 100%; max-width: 400px; height: auto">
+      </slide>
+    </div>
+  </carousel>
+  <carousel [itemsPerSlide]="4" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
+    class="peque">
+    <div class="tv" *ngFor="let serie of series">
+      <slide *ngFor="let slide of slides" style="width: 100%;">
+        <img src="https://image.tmdb.org/t/p/w200/{{serie.poster_path}}" alt="image slide"
+          style="display: block; width: 100%; max-width: 400px; height: auto">
+      </slide>
+    </div>
+  </carousel>
+  <carousel [itemsPerSlide]="3" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
+    class="xpeque">
+    <div class="tv" *ngFor="let serie of series">
+      <slide *ngFor="let slide of slides" style="width: 100%;">
+        <img src="https://image.tmdb.org/t/p/w200/{{serie.poster_path}}" alt="image slide"
+          style="display: block; width: 100%; max-width: 400px; height: auto">
+      </slide>
+    </div>
+  </carousel>
+</div>
