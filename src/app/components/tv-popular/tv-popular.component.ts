@@ -33,9 +33,17 @@ export class TvPopularComponent implements OnInit, OnDestroy {
       },
       error => console.log(error))
   }
-  pagination() {
+  paginationNext() {
     this.page = ++this.page;
     this.getSeries('popular')
+  }
+  paginationPrevious() {
+    if (this.page === 1) {
+      document.querySelector('.previous').className = 'disabled';
+    } else {
+      this.page = --this.page;
+      this.getSeries('popular')
+    }
   }
   getGenres() {
     this.loading = true;

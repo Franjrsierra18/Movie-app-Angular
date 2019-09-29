@@ -14,7 +14,9 @@
 </header> -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active"
-  [routerLinkActiveOptions]="{ exact: true }" class="active"><h3>Home</h3></a>
+    [routerLinkActiveOptions]="{ exact: true }" class="active">
+    <h3>Home</h3>
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -22,17 +24,38 @@
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-3">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/tv/popular']" routerLinkActive="router-link-active">Popular TV Series</a>
+      <li class="nav-item dropdown">
+        <div id="dLabel" type="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+          TV Series
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dLabel">
+          <a class="dropdown-item" aria-labelledby="dLabel" [routerLink]="['/tv/popular']"
+            routerLinkActive="router-link-active">
+            Popular TV Series
+          </a>
+          <a class="dropdown-item" [routerLink]="['/tv/top_rated']" routerLinkActive="router-link-active">Top Rated TV
+            Series</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/tv/top_rated']" routerLinkActive="router-link-active">Top Rated TV Series</a>
+      <li class="nav-item dropdown">
+        <div id="dLabel" type="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+          Movies
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dLabel">
+          <a class="dropdown-item" aria-labelledby="dLabel" [routerLink]="['/movies/upcoming']"
+            routerLinkActive="router-link-active">Upcoming Movies</a>
+          <a class="dropdown-item" aria-labelledby="dLabel" [routerLink]="['/movies/popular']"
+            routerLinkActive="router-link-active">Popular Movies</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/movies/popular']" routerLinkActive="router-link-active">Popular Movies</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/movies/upcoming']" routerLinkActive="router-link-active">Upcoming Movies</a>
+      <li class="nav-item dropdown">
+        <div id="dLabel" type="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+          People
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dLabel">
+          <a class="dropdown-item" aria-labelledby="dLabel" [routerLink]="['/person/popular']"
+            routerLinkActive="router-link-active">Popular people in Movies and Tv</a>
+        </div>
       </li>
     </ul>
     <app-search-bar></app-search-bar>

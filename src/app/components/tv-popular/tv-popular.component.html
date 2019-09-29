@@ -1,6 +1,15 @@
 <app-loading *ngIf="loading"></app-loading>
 <div *ngIf="!loading">
-  <button on-click='pagination()'>+</button>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination pagination-circle pg-blue justify-content-center mt-5">
+      <li class="page-item previous"><a class="page-link" mdbWavesEffect on-click='paginationPrevious()'>&laquo;
+          Previous page</a></li>
+      <li class="page-item"><a class="page-link" mdbWavesEffect on-click='paginationNext()'>Next page &raquo;</a></li>
+    </ul>
+  </nav>
+  <br>
+  <h3 class="text-center">Popular Movies</h3>
+  <br>
   <div class="series">
     <div class="serie" *ngFor="let serie of series">
       <a routerLink="/tv/{{serie.id}}" routerLinkActive="router-link-active">
@@ -11,16 +20,16 @@
         <br>
       </a>
       <div class="scrollable" id="style-7">
-          <p>Rating: {{serie.vote_average}} ⭐</p>
-          <span *ngFor="let genre_id of serie.genre_ids">
-              <span class="genre_id" *ngFor="let genre of genres">
-                  <span class="genres-names" *ngIf="genre_id === genre.id">{{genre?.name}}  </span>
-              </span>
-              <!-- Genres: {{genres.}}{{movie.genre_ids}} -->
+        <p>Rating: {{serie.vote_average}} ⭐</p>
+        <span *ngFor="let genre_id of serie.genre_ids">
+          <span class="genre_id" *ngFor="let genre of genres">
+            <span class="genres-names" *ngIf="genre_id === genre.id">{{genre?.name}} </span>
           </span>
-          <br>
-          {{serie.overview}}
-        </div>
+          <!-- Genres: {{genres.}}{{movie.genre_ids}} -->
+        </span>
+        <br>
+        {{serie.overview}}
+      </div>
     </div>
   </div>
 </div>

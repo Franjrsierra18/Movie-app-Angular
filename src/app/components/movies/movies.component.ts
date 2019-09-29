@@ -33,9 +33,17 @@ export class MoviesComponent implements OnInit, OnDestroy {
       },
       error => console.log(error))
   }
-  pagination() {
+  paginationNext() {
     this.page = ++this.page;
     this.getMovies('popular')
+  }
+  paginationPrevious() {
+    if (this.page === 1) {
+      document.querySelector('.previous').className = 'disabled';
+    } else {
+      this.page = --this.page;
+      this.getMovies('popular')
+    }
   }
   getGenres() {
     this.loading = true;
