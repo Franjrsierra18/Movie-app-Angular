@@ -19,10 +19,10 @@ export class PeopleComponent implements OnInit {
   ngOnInit() {
     this.paramsSubscription = this.route.paramMap.subscribe(paramsMap => {//nos suscribimos a cambios en los parámetros de la url ej: /movie/movies o /movie/upcoming
 
-      this.getPeople()//upcoming o /movies
+      this.getPeople(this.page)//upcoming o /movies
     })
   }
-  getPeople() {
+  getPeople(page) {
     this.loading = true;
     this.peopleService.getPeople(this.page).subscribe(
       res => {
@@ -33,14 +33,14 @@ export class PeopleComponent implements OnInit {
   }
   paginationNext() {
     this.page = ++this.page;
-    this.getPeople()
+    this.getPeople(this.page)
   }
   paginationPrevious() {
     if (this.page === 1) {
       document.querySelector('.previous').className = 'disabled';
     } else {
       this.page = --this.page;
-      this.getPeople()
+      this.getPeople(this.page)
     }
   }
 }

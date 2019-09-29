@@ -8,7 +8,7 @@
     </ul>
   </nav>
   <br>
-  <h3 class="text-center">Popular Movies</h3>
+  <h3 class="text-center">Movies</h3>
   <br>
   <div class="d-flex justify-content-center align-items-center">
     <input [(ngModel)]="filter" class="form-control mr-sm-2 w-50 shadow" type="text" name="search" placeholder="Search">
@@ -19,7 +19,7 @@
         <p>{{movie.title}}</p>
       </a>
       <a routerLink="/movie/{{movie.id}}" routerLinkActive="router-link-active">
-        <img src="https://image.tmdb.org/t/p/w200/{{movie.poster_path}}" alt="">
+        <img src="https://image.tmdb.org/t/p/w200/{{movie.poster_path}}" alt="" style="width: 100%">
         <br>
       </a>
       <div class="scrollable" id="style-7">

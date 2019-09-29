@@ -3,7 +3,7 @@
   <h2>Popular People</h2>
   <br>
   <carousel [itemsPerSlide]="7" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
-    [pauseOnFocus]="false" class="xgrande">
+    [pauseOnFocus]="false" class="xgrande shadow">
     <div class="pelicula" *ngFor="let people of peoples">
       <slide *ngFor="let slide of slides" style="width: 100%;">
         <img src="https://image.tmdb.org/t/p/w200/{{people.profile_path}}" alt="image slide"
@@ -12,7 +12,7 @@
     </div>
   </carousel>
   <carousel [itemsPerSlide]="6" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
-    [pauseOnFocus]="false" class="grande">
+    [pauseOnFocus]="false" class="grande shadow">
     <div class="pelicula" *ngFor="let people of peoples">
       <slide *ngFor="let slide of slides" style="width: 100%;">
         <img src="https://image.tmdb.org/t/p/w200/{{people.profile_path}}" alt="image slide"
@@ -21,7 +21,7 @@
     </div>
   </carousel>
   <carousel [itemsPerSlide]="5" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
-    [pauseOnFocus]="false" class="mediano">
+    [pauseOnFocus]="false" class="mediano shadow">
     <div class="pelicula" *ngFor="let people of peoples">
       <slide *ngFor="let slide of slides" style="width: 100%;">
         <img src="https://image.tmdb.org/t/p/w200/{{people.profile_path}}" alt="image slide"
@@ -30,7 +30,7 @@
     </div>
   </carousel>
   <carousel [itemsPerSlide]="4" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
-    [pauseOnFocus]="false" class="peque">
+    [pauseOnFocus]="false" class="peque shadow">
     <div class="pelicula" *ngFor="let people of peoples">
       <slide *ngFor="let slide of slides" style="width: 100%;">
         <img src="https://image.tmdb.org/t/p/w200/{{people.profile_path}}" alt="image slide"
@@ -39,7 +39,7 @@
     </div>
   </carousel>
   <carousel [itemsPerSlide]="3" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
-    [pauseOnFocus]="false" class="xpeque">
+    [pauseOnFocus]="false" class="xpeque shadow">
     <div class="pelicula" *ngFor="let people of peoples">
       <slide *ngFor="let slide of slides" style="width: 100%;">
         <img src="https://image.tmdb.org/t/p/w200/{{people.profile_path}}" alt="image slide"

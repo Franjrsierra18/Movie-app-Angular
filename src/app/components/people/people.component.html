@@ -20,8 +20,7 @@
         <p>{{people.name}}</p>
       </a>
       <a routerLink="/people/{{people.id}}" routerLinkActive="router-link-active">
-        <img src="https://image.tmdb.org/t/p/w200/{{people.profile_path}}" alt="">
-        <br>
+        <img src="https://image.tmdb.org/t/p/w200/{{people.profile_path}}" alt="" style="width: 100%; border-radius: 1em">
       </a>
       <div class="scrollable" id="style-7">
         <span *ngFor="let known of people.known_for">

@@ -22,7 +22,7 @@ export class CarouselPeopleComponent implements OnInit {
   }
   getPeople(){
     this.loading = true;
-    this.peopleService.getPeople().subscribe(
+    this.peopleService.getPeople(1).subscribe(
       res => {
         this.peoples = res['results'];
         this.loading = false;

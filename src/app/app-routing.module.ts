@@ -5,15 +5,19 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
 import { TvPopularComponent } from './components/tv-popular/tv-popular.component';
 import { MainComponent } from './components/main/main.component';
 import { PeopleComponent } from './components/people/people.component';
+import { TvDetailComponent } from './components/tv-detail/tv-detail.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
 
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'tv/:category', component: TvPopularComponent },
+  { path: 'tv/:id', component: TvDetailComponent },
   { path: 'movies/:category', component: MoviesComponent },
   { path: 'movie/:id', component: MovieDetailComponent },
   { path: 'person/popular', component: PeopleComponent },
   { path: 'person/:id', component: PeopleComponent },
+  { path: 'search/results', component: SearchResultsComponent },
 ];
 
 @NgModule({

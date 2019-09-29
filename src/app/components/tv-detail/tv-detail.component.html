@@ -1,1 +1,26 @@
-<p>tv-detail works!</p>
+<app-loading *ngIf="loading"></app-loading>
+<div class="serie" *ngIf="!loading">
+  <h1>{{serie.name}}</h1>
+  <h3>{{serie.homepage}}</h3>
+  <br>
+  <div class="container-serie">
+    <div class="imagen">
+      <img src="https://image.tmdb.org/t/p/w300/{{serie.poster_path}}" alt="">
+    </div>
+    <div class="details">
+
+      <p><strong>Created by:</strong> {{serie.created_by.name}}</p>
+      <p><strong>Seasons:</strong> {{serie.episode_run_time}}</p>
+      <p><strong>First episode date:</strong> {{serie.first_air_date}}</p>
+      <p><strong>Rating:</strong> {{serie.vote_average}} ⭐</p>
+      <p><strong>Review:</strong> {{serie.overview}}</p>
+      <br>
+      <p><strong>Last episode:</strong> {{serie.last_episode_to_air.episode_number}} {{serie.last_episode_to_air.name}}</p>
+      <p><strong>Next episode:</strong> {{serie.next_episode_to_air.episode_number}} {{serie.next_episode_to_air.name}}</p>
+      <br>
+      <p><strong>Network Companies:</strong> {{serie.networks.name}} <img src="https://image.tmdb.org/t/p/w300/{{serie.networks.logo_path}}" alt=""></p>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>

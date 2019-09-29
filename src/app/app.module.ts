@@ -24,6 +24,7 @@ import { CarouselPeopleComponent } from './components/carousel-people/carousel-p
 import { PeopleComponent } from './components/people/people.component';
 import { SearchPipe } from './pipe/search.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     TvDetailComponent,
     CarouselPeopleComponent,
     PeopleComponent,
-    SearchPipe
+    SearchPipe,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,

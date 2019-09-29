@@ -3,7 +3,7 @@
   <h2>Popular Tv Series</h2>
   <br>
   <carousel [itemsPerSlide]="7" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
-    class="xgrande">
+    class="xgrande shadow">
     <div class="tv" *ngFor="let serie of series">
       <slide *ngFor="let slide of slides" style="width: 100%;">
         <img src="https://image.tmdb.org/t/p/w200/{{serie.poster_path}}" alt="image slide"
@@ -12,7 +12,7 @@
     </div>
   </carousel>
   <carousel [itemsPerSlide]="6" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
-    class="grande">
+    class="grande shadow">
     <div class="tv" *ngFor="let serie of series">
       <slide *ngFor="let slide of slides" style="width: 100%;">
         <img src="https://image.tmdb.org/t/p/w200/{{serie.poster_path}}" alt="image slide"
@@ -21,7 +21,7 @@
     </div>
   </carousel>
   <carousel [itemsPerSlide]="5" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
-    class="mediano">
+    class="mediano shadow">
     <div class="tv" *ngFor="let serie of series">
       <slide *ngFor="let slide of slides" style="width: 100%;">
         <img src="https://image.tmdb.org/t/p/w200/{{serie.poster_path}}" alt="image slide"
@@ -30,7 +30,7 @@
     </div>
   </carousel>
   <carousel [itemsPerSlide]="4" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
-    class="peque">
+    class="peque shadow">
     <div class="tv" *ngFor="let serie of series">
       <slide *ngFor="let slide of slides" style="width: 100%;">
         <img src="https://image.tmdb.org/t/p/w200/{{serie.poster_path}}" alt="image slide"
@@ -39,7 +39,7 @@
     </div>
   </carousel>
   <carousel [itemsPerSlide]="3" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
-    class="xpeque">
+    class="xpeque shadow">
     <div class="tv" *ngFor="let serie of series">
       <slide *ngFor="let slide of slides" style="width: 100%;">
         <img src="https://image.tmdb.org/t/p/w200/{{serie.poster_path}}" alt="image slide"
