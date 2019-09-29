@@ -22,6 +22,8 @@ import { MainComponent } from './components/main/main.component';
 import { TvDetailComponent } from './components/tv-detail/tv-detail.component';
 import { CarouselPeopleComponent } from './components/carousel-people/carousel-people.component';
 import { PeopleComponent } from './components/people/people.component';
+import { SearchPipe } from './pipe/search.pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { PeopleComponent } from './components/people/people.component';
     MainComponent,
     TvDetailComponent,
     CarouselPeopleComponent,
-    PeopleComponent
+    PeopleComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { PeopleComponent } from './components/people/people.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
+    Ng2SearchPipeModule,
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),
   ],

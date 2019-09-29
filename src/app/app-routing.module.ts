@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'tv/:category', component: TvPopularComponent },
   { path: 'movies/:category', component: MoviesComponent },
   { path: 'movie/:id', component: MovieDetailComponent },
-  { path: 'people/popular', component: PeopleComponent },
+  { path: 'person/popular', component: PeopleComponent },
+  { path: 'person/:id', component: PeopleComponent },
 ];
 
 @NgModule({

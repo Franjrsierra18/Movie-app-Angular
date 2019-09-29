@@ -1,82 +1,20 @@
 <app-loading *ngIf="loading"></app-loading>
 <div *ngIf="!loading">
-  <!-- <div class="wrapper">
-    <input checked type=radio name="slider" id="slide1" />
-    <input type=radio name="slider" id="slide2" />
-    <input type=radio name="slider" id="slide3" />
-    <input type=radio name="slider" id="slide4" />
-    <input type=radio name="slider" id="slide5" />
-
-    <div class="slider-wrapper">
-      <div class=inner>
-        <article>
-          <div class="info top-left">
-            <h3>Malacca</h3>
-          </div>
-          <img src="https://i.pinimg.com/originals/ff/a1/09/ffa1096433f14975a629e67880ded7e7.jpg" />
-        </article>
-
-        <article>
-          <div class="info bottom-right">
-            <h3>Cameron Highland</h3>
-          </div>
-          <img src="https://theknackinitiative.files.wordpress.com/2014/03/bane-batman-standoff-the-dark-knight-rises-wall-poster1.jpg" />
-        </article>
-
-        <article>
-          <div class="info bottom-left">
-            <h3>New Delhi</h3>
-          </div>
-          <img src="https://i.pinimg.com/originals/35/5d/65/355d65da2e1dc28b3399951765bc5fb1.jpg" />
-        </article>
-
-        <article>
-          <div class="info top-right">
-            <h3>Ladakh</h3>
-          </div>
-          <img src="https://www.joblo.com/assets/images/oldsite/posters/images/full/inception-uk-banner1.jpg" />
-        </article>
-
-        <article>
-          <div class="info bottom-left">
-            <h3>Nubra Valley</h3>
-          </div>
-          <img src="https://images.squarespace-cdn.com/content/v1/592b020a8419c2e1dd1199dc/1524530860144-4X5PW3EH8PEZBIA6BE9W/ke17ZwdGBToddI8pDm48kPA_HmeKywdSn1MWTfgsNG8UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcsIpLZh9fCE7UEqlC_9oskZsOsTyNwPVGtzNmlNgGElO8Ys_Oap3WUvywa4UydumI/avengers.jpg" />
-        </article>
-      </div> -->
-  <!-- .inner -->
-  <!-- </div> -->
-  <!-- .slider-wrapper -->
-
-  <!-- <div class="slider-prev-next-control">
-      <label for=slide1></label>
-      <label for=slide2></label>
-      <label for=slide3></label>
-      <label for=slide4></label>
-      <label for=slide5></label>
-    </div> -->
-  <!-- .slider-prev-next-control -->
-
-  <!-- <div class="slider-dot-control">
-      <label for=slide1></label>
-      <label for=slide2></label>
-      <label for=slide3></label>
-      <label for=slide4></label>
-      <label for=slide5></label>
-    </div> -->
-  <!-- .slider-dot-control -->
-  <!-- </div> -->
   <nav aria-label="Page navigation example">
     <ul class="pagination pagination-circle pg-blue justify-content-center mt-5">
-      <li class="page-item previous"><a class="page-link" mdbWavesEffect on-click='paginationPrevious()'>&laquo; Previous page</a></li>
+      <li class="page-item previous"><a class="page-link" mdbWavesEffect on-click='paginationPrevious()'>&laquo;
+          Previous page</a></li>
       <li class="page-item"><a class="page-link" mdbWavesEffect on-click='paginationNext()'>Next page &raquo;</a></li>
     </ul>
   </nav>
   <br>
   <h3 class="text-center">Popular Movies</h3>
   <br>
+  <div class="d-flex justify-content-center align-items-center">
+    <input [(ngModel)]="filter" class="form-control mr-sm-2 w-50 shadow" type="text" name="search" placeholder="Search">
+  </div>
   <div class="peliculas">
-    <div class="pelicula" *ngFor="let movie of movies">
+    <div class="pelicula" *ngFor="let movie of movies | filter:filter">
       <a routerLink="/movie/{{movie.id}}" routerLinkActive="router-link-active">
         <p>{{movie.title}}</p>
       </a>

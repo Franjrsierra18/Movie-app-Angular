@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CarouselComponent implements OnInit {
   public movies: object[];
+  public loading: any;
   // itemsPerSlide = 7;
   singleSlideOffset = true;
 
@@ -23,9 +24,11 @@ export class CarouselComponent implements OnInit {
     this.getMovies()
   }
   getMovies(){
+    this.loading = true;
     this.movieService.getMovies('popular', 'es-ES', 1).subscribe(
       res => {
         this.movies = res['results'];
+        this.loading = false;
       },
       error => console.log(error))
   }

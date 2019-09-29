@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CarouselPeopleComponent implements OnInit {
   public peoples: object[];
+  public loading: any;
   singleSlideOffset = true;
   slides = [
     { image: 'https://i.pinimg.com/originals/ff/a1/09/ffa1096433f14975a629e67880ded7e7.jpg' }
@@ -20,9 +21,11 @@ export class CarouselPeopleComponent implements OnInit {
     this.getPeople()
   }
   getPeople(){
+    this.loading = true;
     this.peopleService.getPeople().subscribe(
       res => {
         this.peoples = res['results'];
+        this.loading = false;
       },
       error => console.log(error))
   }

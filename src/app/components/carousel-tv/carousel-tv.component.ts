@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CarouselTvComponent implements OnInit {
   public series: object[];
+  public loading: any;
   // itemsPerSlide = 7;
   singleSlideOffset = true;
 
@@ -23,9 +24,11 @@ export class CarouselTvComponent implements OnInit {
     this.getSeries()
   }
   getSeries() {
+    this.loading = true;
     this.tvService.getSeries('popular', 'es-ES', '1').subscribe(
       res => {
         this.series = res['results'];
+        this.loading = false;
       },
       error => console.log(error))
   }
