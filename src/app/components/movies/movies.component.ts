@@ -35,7 +35,7 @@ export class MoviesComponent implements OnInit, OnDestroy {
   }
   pagination() {
     this.page = ++this.page;
-    this.getMovies('popular' )
+    this.getMovies('popular')
   }
   getGenres() {
     this.loading = true;

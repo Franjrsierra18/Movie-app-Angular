@@ -20,6 +20,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselTvComponent } from './components/carousel-tv/carousel-tv.component';
 import { MainComponent } from './components/main/main.component';
 import { TvDetailComponent } from './components/tv-detail/tv-detail.component';
+import { CarouselPeopleComponent } from './components/carousel-people/carousel-people.component';
+import { PeopleComponent } from './components/people/people.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { TvDetailComponent } from './components/tv-detail/tv-detail.component';
     SearchBarComponent,
     CarouselTvComponent,
     MainComponent,
-    TvDetailComponent
+    TvDetailComponent,
+    CarouselPeopleComponent,
+    PeopleComponent
   ],
   imports: [
     BrowserModule,
