@@ -10,14 +10,14 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 
 
 const routes: Routes = [
-  { path: '', component: MainComponent },
+  { path: '', component: MainComponent},
+  { path: 'serie/:id', component: TvDetailComponent },
   { path: 'tv/:category', component: TvPopularComponent },
-  { path: 'tv/:id', component: TvDetailComponent },
   { path: 'movies/:category', component: MoviesComponent },
   { path: 'movie/:id', component: MovieDetailComponent },
   { path: 'person/popular', component: PeopleComponent },
   { path: 'person/:id', component: PeopleComponent },
-  { path: 'search/results', component: SearchResultsComponent },
+  { path: 'search/:query', component: SearchResultsComponent },
 ];
 
 @NgModule({

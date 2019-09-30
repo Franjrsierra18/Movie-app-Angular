@@ -26,7 +26,7 @@ export class TvPopularComponent implements OnInit, OnDestroy {
   }
   getSeries(category) {
     this.loading = true;
-    this.tvService.getSeries(category, 'es-ES', '1').subscribe(
+    this.tvService.getSeries(category, 'es-ES', String(this.page)).subscribe(
       res => {
         this.series = res['results'];
         this.loading = false;
@@ -38,12 +38,8 @@ export class TvPopularComponent implements OnInit, OnDestroy {
     this.getSeries('popular')
   }
   paginationPrevious() {
-    if (this.page === 1) {
-      document.querySelector('.previous').className = 'disabled';
-    } else {
       this.page = --this.page;
       this.getSeries('popular')
-    }
   }
   getGenres() {
     this.loading = true;
