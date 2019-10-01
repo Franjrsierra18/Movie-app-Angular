@@ -1,3 +1,8 @@
 <form class="form-inline my-2 my-lg-0">
-  <input #query  class="form-control mr-sm-2" type="text" placeholder="Search" (keyup.enter)="onEnter(query.value)">
+  <div class="input-group mr-sm-2">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">{{category}}</label>
+    </div>
+  </div>
+  <input #query class="form-control mr-sm-2" type="text" placeholder="Search" (keyup.enter)="onEnter(query.value)">
 </form>

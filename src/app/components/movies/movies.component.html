@@ -11,7 +11,7 @@
   <h3 class="text-center"> {{category.charAt(0).toUpperCase() + category.slice(1)}} Movies</h3>
   <br>
   <div class="d-flex justify-content-center align-items-center">
-    <app-search-bar></app-search-bar>
+    <app-search-bar [category]="movie"></app-search-bar>
   </div>
   <div class="peliculas">
     <div class="pelicula" *ngFor="let movie of movies | filter:filter">
