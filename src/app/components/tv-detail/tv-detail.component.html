@@ -1,7 +1,7 @@
 <app-loading *ngIf="loading"></app-loading>
 <div class="serie" *ngIf="!loading">
   <h1>{{serie.name}}</h1>
-  <h3>{{serie.homepage}}</h3>
+  <a href="{{serie.homepage}}">{{serie.homepage}}</a>
   <br>
   <div class="container-serie">
     <div class="imagen">
@@ -23,4 +23,6 @@
       <br>
     </div>
   </div>
+  <br>
+  <br>
 </div>

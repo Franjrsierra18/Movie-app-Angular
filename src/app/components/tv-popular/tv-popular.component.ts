@@ -12,6 +12,7 @@ export class TvPopularComponent implements OnInit, OnDestroy {
   public series: object[];
   public genres: object[];
   public page: number = 1;
+  public category: string;
   public loading: any;
   public paramsSubscription: Subscription;
   constructor(public tvService: TvService,
@@ -29,17 +30,18 @@ export class TvPopularComponent implements OnInit, OnDestroy {
     this.tvService.getSeries(category, 'es-ES', String(this.page)).subscribe(
       res => {
         this.series = res['results'];
+        this.category = category;
         this.loading = false;
       },
       error => console.log(error))
   }
   paginationNext() {
     this.page = ++this.page;
-    this.getSeries('popular')
+    this.getSeries(this.category)
   }
   paginationPrevious() {
       this.page = --this.page;
-      this.getSeries('popular')
+      this.getSeries(this.category)
   }
   getGenres() {
     this.loading = true;

@@ -25,7 +25,7 @@ export class CarouselTvComponent implements OnInit {
   }
   getSeries() {
     this.loading = true;
-    this.tvService.getSeries('popular', 'es-ES', '1').subscribe(
+    this.tvService.getSeries('airing_today', 'es-ES', '1').subscribe(
       res => {
         this.series = res['results'];
         this.loading = false;

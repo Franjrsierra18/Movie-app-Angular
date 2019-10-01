@@ -2,16 +2,16 @@
 <div *ngIf="!loading">
   <nav aria-label="Page navigation example">
     <ul class="pagination pagination-circle pg-blue justify-content-center mt-5">
-      <li class="page-item previous"><a class="page-link" mdbWavesEffect on-click='paginationPrevious()'>&laquo;
+      <li class="page-item previous {{ page <= 1 ? 'disabled':''}}"><a class="page-link" mdbWavesEffect on-click='paginationPrevious()'>&laquo;
           Previous page</a></li>
       <li class="page-item"><a class="page-link" mdbWavesEffect on-click='paginationNext()'>Next page &raquo;</a></li>
     </ul>
   </nav>
   <br>
-  <h3 class="text-center">Movies</h3>
+  <h3 class="text-center"> {{category.charAt(0).toUpperCase() + category.slice(1)}} Movies</h3>
   <br>
   <div class="d-flex justify-content-center align-items-center">
-    <input [(ngModel)]="filter" class="form-control mr-sm-2 w-50 shadow" type="text" name="search" placeholder="Search">
+    <app-search-bar></app-search-bar>
   </div>
   <div class="peliculas">
     <div class="pelicula" *ngFor="let movie of movies | filter:filter">
@@ -35,4 +35,11 @@
       </div>
     </div>
   </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination pagination-circle pg-blue justify-content-center mt-5 mb-5">
+      <li class="page-item previous"><a class="page-link" mdbWavesEffect on-click='paginationPrevious()'>&laquo;
+          Previous page</a></li>
+      <li class="page-item"><a class="page-link" mdbWavesEffect on-click='paginationNext()'>Next page &raquo;</a></li>
+    </ul>
+  </nav>
 </div>

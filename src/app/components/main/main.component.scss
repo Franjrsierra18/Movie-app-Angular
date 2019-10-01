@@ -1,5 +1,14 @@
-.main{
+.main {
   background-color: rgb(0, 69, 126);
-  height: 210vh;
+  height: 270vh;
   position: relative;
+
+  .jumbotron {
+    color: white;
+    background-image: url("https://atlantis.nyc3.digitaloceanspaces.com/media/legacy/atlantis/Things_To_Do/Entertainment/Hero/Experiences_Theater_Hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+  }
 }

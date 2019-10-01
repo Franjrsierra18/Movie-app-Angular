@@ -25,7 +25,7 @@ export class CarouselComponent implements OnInit {
   }
   getMovies(){
     this.loading = true;
-    this.movieService.getMovies('popular', 'es-ES', 1).subscribe(
+    this.movieService.getMovies('now_playing', 'es-ES', 1).subscribe(
       res => {
         this.movies = res['results'];
         this.loading = false;

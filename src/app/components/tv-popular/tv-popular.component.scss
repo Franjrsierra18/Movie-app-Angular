@@ -1,6 +1,6 @@
 .series {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 31vw);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   padding: 0.8em;
   background-color: rgb(0, 69, 126);
   justify-content: space-evenly;

@@ -35,6 +35,10 @@
           </a>
           <a class="dropdown-item" [routerLink]="['/tv/top_rated']" routerLinkActive="router-link-active">Top Rated TV
             Series</a>
+          <a class="dropdown-item" [routerLink]="['/tv/airing_today']" routerLinkActive="router-link-active">Airing Today TV
+            Series</a>
+          <a class="dropdown-item" [routerLink]="['/tv/on_the_air']" routerLinkActive="router-link-active">On the Air TV
+            Series</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -43,9 +47,13 @@
         </div>
         <div class="dropdown-menu" aria-labelledby="dLabel">
           <a class="dropdown-item" aria-labelledby="dLabel" [routerLink]="['/movies/upcoming']"
-            routerLinkActive="router-link-active">Upcoming Movies</a>
+            routerLinkActive="router-link-active">Upcoming</a>
           <a class="dropdown-item" aria-labelledby="dLabel" [routerLink]="['/movies/popular']"
-            routerLinkActive="router-link-active">Popular Movies</a>
+            routerLinkActive="router-link-active">Popular</a>
+          <a class="dropdown-item" aria-labelledby="dLabel" [routerLink]="['/movies/top_rated']"
+            routerLinkActive="router-link-active">Top Rated</a>
+          <a class="dropdown-item" aria-labelledby="dLabel" [routerLink]="['/movies/now_playing']"
+            routerLinkActive="router-link-active">Now Playing</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -58,6 +66,5 @@
         </div>
       </li>
     </ul>
-    <app-search-bar></app-search-bar>
   </div>
 </nav>

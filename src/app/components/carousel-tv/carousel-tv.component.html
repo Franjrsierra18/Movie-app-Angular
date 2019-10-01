@@ -1,6 +1,6 @@
 <app-loading *ngIf="loading"></app-loading>
-<div class="pt-5" *ngIf="!loading">
-  <h2>Popular Tv Series</h2>
+<div class="pt-5 pl-3 pr-3" *ngIf="!loading">
+  <h2>Airing Today Tv Series</h2>
   <br>
   <carousel [itemsPerSlide]="7" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="10" [interval]="1000"
     class="xgrande shadow">

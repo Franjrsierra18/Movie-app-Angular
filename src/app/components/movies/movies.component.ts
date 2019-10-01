@@ -13,6 +13,7 @@ export class MoviesComponent implements OnInit, OnDestroy {
   public genres: object[];
   public loading: any;
   public page: number = 1;
+  public category: string;
   public paramsSubscription: Subscription;
   constructor(public movieService: MovieService,
     public route: ActivatedRoute) { }//inyectamos el servicio MovieService en el componente moviesComponent
@@ -29,21 +30,18 @@ export class MoviesComponent implements OnInit, OnDestroy {
     this.movieService.getMovies(category, 'es-ES', this.page).subscribe(
       res => {
         this.movies = res['results'];
+        this.category = category; 
         this.loading = false;
       },
       error => console.log(error))
   }
   paginationNext() {
     this.page = ++this.page;
-    this.getMovies('popular')
+    this.getMovies(this.category)
   }
   paginationPrevious() {
-    if (this.page === 1) {
-      document.querySelector('.previous').className = 'disabled';
-    } else {
-      this.page = --this.page;
-      this.getMovies('popular')
-    }
+    this.page = --this.page;
+    this.getMovies(this.category)
   }
   getGenres() {
     this.loading = true;

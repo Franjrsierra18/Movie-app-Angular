@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from 'src/app/services/search.service';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-search-results',
@@ -7,10 +9,21 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./search-results.component.scss']
 })
 export class SearchResultsComponent implements OnInit {
-  public all: object[];  
-  constructor(public route: ActivatedRoute) { }
+  public peliculas: object[];
+  public query:string = '';
+  public paramsSubscription: Subscription;
+  constructor(public searchService: SearchService, public route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.paramsSubscription = this.route.paramMap.subscribe(params => {
+       this.getSearchMovies(params.get('query'))
+    })
   }
-
+  getSearchMovies(query: string) {
+    this.searchService.getSearchMovies(query).subscribe(
+      res => {
+        this.peliculas = res['results'];
+      }
+    )
+  }
 }

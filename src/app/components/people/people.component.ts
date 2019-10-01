@@ -11,7 +11,8 @@ import { Subscription } from 'rxjs';
 export class PeopleComponent implements OnInit {
   public peoples: object[];
   public loading: any;
-  public page: number = 1;
+  public page: number = 2;
+  public category: string;
   public paramsSubscription: Subscription;
   constructor(public peopleService: PeopleService,
     public route: ActivatedRoute) { }
@@ -36,11 +37,7 @@ export class PeopleComponent implements OnInit {
     this.getPeople(this.page)
   }
   paginationPrevious() {
-    if (this.page === 1) {
-      document.querySelector('.previous').className = 'disabled';
-    } else {
-      this.page = --this.page;
-      this.getPeople(this.page)
-    }
+    this.page = --this.page;
+    this.getPeople(this.page)
   }
 }

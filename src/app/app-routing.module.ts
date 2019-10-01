@@ -10,7 +10,7 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 
 
 const routes: Routes = [
-  { path: '', component: MainComponent},
+  { path: '', component: MainComponent, pathMatch:'full'},
   { path: 'serie/:id', component: TvDetailComponent },
   { path: 'tv/:category', component: TvPopularComponent },
   { path: 'movies/:category', component: MoviesComponent },
