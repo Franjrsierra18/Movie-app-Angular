@@ -15,7 +15,7 @@
     <app-search-bar></app-search-bar>
   </div>
   <div class="series">
-    <div class="serie" *ngFor="let serie of series | filter:filter">
+    <div class="serie" *ngFor="let serie of series">
       <a routerLink="/serie/{{serie.id}}" routerLinkActive="router-link-active">
         <p>{{serie.name}}</p>
       </a>

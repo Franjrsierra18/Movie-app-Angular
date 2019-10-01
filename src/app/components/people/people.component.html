@@ -11,11 +11,11 @@
   <h3 class="text-center">Popular Actors and Actresses</h3>
   <br>
   <div class="d-flex justify-content-center align-items-center">
-    <input [(ngModel)]="filter" class="form-control mr-sm-2 w-50 shadow" type="text" name="search"
-      placeholder="Search">
+    <!-- <input [(ngModel)]="filter" class="form-control mr-sm-2 w-50 shadow" type="text" name="search"
+      placeholder="Search"> -->
   </div>
   <div class="personas">
-    <div class="persona" *ngFor="let people of peoples | filter:filter">
+    <div class="persona" *ngFor="let people of peoples">
       <a routerLink="/person/{{people.id}}" routerLinkActive="router-link-active">
         <p>{{people.name}}</p>
       </a>

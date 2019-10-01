@@ -9,7 +9,7 @@ import {  Subscription } from 'rxjs';
   styleUrls: ['./movie-detail.component.scss']
 })
 export class MovieDetailComponent implements OnInit {
-  public movie: object;
+  public movie: any;
   public loading:any;
   public paramsSubscription:Subscription;
   constructor(public movieService: MovieService,
@@ -17,7 +17,7 @@ export class MovieDetailComponent implements OnInit {
 
   ngOnInit() {
     this.paramsSubscription=this.route.paramMap.subscribe(paramsMap=>{//nos suscribimos a cambios en los parámetros de la url ej: /movie/movies o /movie/upcoming
-      
+
       this.getMoviesId(paramsMap['params']['id'])//upcoming o /movies
     })
   }
