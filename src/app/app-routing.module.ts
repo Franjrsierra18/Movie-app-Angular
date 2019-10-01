@@ -7,6 +7,8 @@ import { MainComponent } from './components/main/main.component';
 import { PeopleComponent } from './components/people/people.component';
 import { TvDetailComponent } from './components/tv-detail/tv-detail.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { SearchResultsPeopleComponent } from './components/search-results-people/search-results-people.component';
+import { SearchResultsTvComponent } from './components/search-results-tv/search-results-tv.component';
 
 
 const routes: Routes = [
@@ -18,8 +20,8 @@ const routes: Routes = [
   { path: 'person/popular', component: PeopleComponent },
   { path: 'person/:id', component: PeopleComponent },
   { path: 'search/movie/:query', component: SearchResultsComponent },
-  { path: 'search/tv/:query', component: SearchResultsComponent },
-  { path: 'search/person/:query', component: SearchResultsComponent },
+  { path: 'search/tv/:query', component: SearchResultsTvComponent },
+  { path: 'search/person/:query', component: SearchResultsPeopleComponent },
 ];
 
 @NgModule({

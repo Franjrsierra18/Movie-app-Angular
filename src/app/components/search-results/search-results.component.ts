@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
 export class SearchResultsComponent implements OnInit {
   public peliculas: object[];
   public query:string = '';
+  public loading: any;
   public paramsSubscription: Subscription;
   constructor(public searchService: SearchService, public route: ActivatedRoute) { }
 
@@ -20,9 +21,11 @@ export class SearchResultsComponent implements OnInit {
     })
   }
   getSearchMovies(query: string) {
+    this.loading = true;
     this.searchService.getSearchMovies(query).subscribe(
       res => {
         this.peliculas = res['results'];
+        this.loading = false;
       }
     )
   }

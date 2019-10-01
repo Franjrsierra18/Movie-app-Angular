@@ -25,6 +25,10 @@ import { PeopleComponent } from './components/people/people.component';
 import { SearchPipe } from './pipe/search.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { SearchBarTvComponent } from './components/search-bar-tv/search-bar-tv.component';
+import { SearchBarPeopleComponent } from './components/search-bar-people/search-bar-people.component';
+import { SearchResultsPeopleComponent } from './components/search-results-people/search-results-people.component';
+import { SearchResultsTvComponent } from './components/search-results-tv/search-results-tv.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,11 @@ import { SearchResultsComponent } from './components/search-results/search-resul
     CarouselPeopleComponent,
     PeopleComponent,
     SearchPipe,
-    SearchResultsComponent
+    SearchResultsComponent,
+    SearchBarTvComponent,
+    SearchBarPeopleComponent,
+    SearchResultsPeopleComponent,
+    SearchResultsTvComponent
   ],
   imports: [
     BrowserModule,

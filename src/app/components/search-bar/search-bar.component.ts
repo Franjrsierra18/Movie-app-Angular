@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,14 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./search-bar.component.scss']
 })
 export class SearchBarComponent{
-  @Input() category: string;
-  public options: string[] = ['movie', 'tv', 'people'];
 
   constructor(private router: Router) { }
 
   onEnter(query) {
-   
     this.router.navigate(['/search/movie/' + query])
   }
-  
 }

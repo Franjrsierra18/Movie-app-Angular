@@ -1,0 +1,20 @@
+<app-loading *ngIf="loading"></app-loading>
+<div *ngIf="!loading">
+  <br>
+  <h3 class="text-center">Resultados</h3>
+  <br>
+  <div class="series">
+    <div class="serie" *ngFor="let serie of series">
+      <p>
+        {{serie.title}}
+      </p>
+      <a>
+        <img src="https://image.tmdb.org/t/p/w200/{{serie.poster_path}}" alt="" style="width: 100%">
+        <br>
+      </a>
+      <div class="scrollable" id="style-7">
+        <p>Rating: {{serie.vote_average}} ⭐</p>
+        {{serie.overview}}
+      </div>
+    </div>
+  </div>
