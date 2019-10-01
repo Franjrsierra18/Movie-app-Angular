@@ -11,7 +11,7 @@ import { log } from 'util';
   styleUrls: ['./tv-detail.component.scss']
 })
 export class TvDetailComponent implements OnInit {
-  public serie: object;
+  public serie: any;
   public loading: any;
   public paramsSubscription: Subscription;
   constructor(public tvService: TvService,
