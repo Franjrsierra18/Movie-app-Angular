@@ -4,7 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "build": "ng build --prod",
+    "build": "ng build --prod  --output-path docs --base-href /Movie-app-Angular/",
+    "postbuild":"cp docs/index.html docs/404.html",
+    "predeploy":"npm run build",
+    "deploy": "git add docs &&  git commit -m build && git push origin master",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
