@@ -1,6 +1,9 @@
-A movie app built with Angular and using the Moviedb API
+A movie app built with Angular and using the Moviedb API.
+
+
 
 Responsive Design and carousel implementation.
+
 ![](videotogif_2019.10.05_20.06.57.gif)
 
 Hamburguer menu, routing in Angular.
