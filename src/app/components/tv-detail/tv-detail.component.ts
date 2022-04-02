@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { TvService } from 'src/app/services/tv.service';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { log } from 'util';
 
 
 @Component({
